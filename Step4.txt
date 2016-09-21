@@ -1,0 +1,11 @@
+Step 4:
+A. What (general) direction is the sound coming from?
+The sound is coming from the northwest direction.
+B. Explain how you solved part A.
+I know this because the first point that receives a ping is C, which means that the sound has to come from the north. The next point that receives a ping is B, which indicates that the sound is coming from the west. Put these two together [waves comes at an angle], and the sound is coming from the northwest.
+C. If you only look at the difference of arrival between Hydrophone C and B, what general shape does all of the possible coordinates for the location of the sound make?
+The general shape all the possible locations of the location of the sound makes a circle based on the positioning of C and B [see attached files].
+D. What coordinates does the sound originate from (assuming it is on the same two dimensional plane)?
+The coordinates are (-3.9276,4.4549).
+E. If you were to solve this programmatically given any three time values, how would you do it?
+I would find the TDoA of points C,B and C,A and calculate the distance from C. Then, I would plug these values into a system ofone  Since the location of C is known [we can preset its value to (0,0)], then we can set the other two points (B and C) away from it using their calculated distances. We can put them on the x-axis, and substitute these points into the equation of a circle, where (h,k) is the origin of the sound [Circle: (x-h)^2+(y-k)^2=r^2]. Round the decimals to a certain place, then run a loop comparing x and y values, increasing by a slight decimal point. Rinse and repeat.
